@@ -1,0 +1,22 @@
+.swiper {
+  height: 300px;
+  z-index: 4;
+}
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+  width: 250px;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+}
+.swiper-slide img {
+  position: absolute;
+  inset: 0;
+  max-width: 200px;
+  max-height: 100%;
+}
+.swiper-3d .swiper-slide-shadow-left,
+.swiper-3d .swiper-slide-shadow-right {
+  background-image: none;
+}

@@ -1,0 +1,10 @@
+.special {
+  margin: 5em auto;
+
+  & img {
+    width: 100%;
+  }
+  & .row {
+    justify-content: space-evenly;
+  }
+}

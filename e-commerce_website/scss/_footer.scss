@@ -1,0 +1,24 @@
+.footer {
+  padding: 0.5em 0em;
+  background: $black;
+
+  &-content {
+    margin: 0.5em auto;
+    max-width: 1080px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+
+    .socials {
+      display: flex;
+      gap: 0.5rem;
+      font-size: 1.75rem;
+
+      a {
+        color: white;
+        padding: 0.25em;
+      }
+    }
+  }
+}

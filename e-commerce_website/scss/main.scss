@@ -1,0 +1,80 @@
+@import "./config";
+@import "./variables";
+@import "./header";
+@import "./hero";
+@import "./swiper";
+@import "./card";
+@import "./special";
+@import "./footer";
+@import "./products";
+@import "./cart";
+@import "./form";
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,900&display=swap");
+
+body {
+  color: white;
+  background: $body-gradient;
+  font-family: "Poppins", sans-serif;
+}
+a.btn {
+  color: $white;
+  margin-top: 1em;
+  font-weight: 500;
+  padding: 0.5em 1em;
+  border-radius: 100vw;
+  background: $circle-gradient;
+  display: inline-block;
+  transition: $transition;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.85em;
+}
+.col-2 {
+  flex-basis: 40%;
+  width: 40%;
+}
+.col-3 {
+  flex-basis: 30%;
+}
+.col-4 {
+  flex-basis: 24%;
+}
+.small-container {
+  width: 100%;
+  margin: 1em auto;
+  max-width: 1080px;
+}
+.title {
+  text-align: center;
+  color: $white;
+  padding: 1em;
+  margin: 2em auto;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 5px;
+    left: 50%;
+    bottom: 0;
+    background: $white;
+    transform: translateX(-50%);
+  }
+}
+@media screen and (max-width: 991px) {
+  .col-2,
+  .col-3,
+  .col-4 {
+    flex-basis: 90%;
+    margin: 1em auto;
+  }
+}
