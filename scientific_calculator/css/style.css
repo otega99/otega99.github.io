@@ -1,0 +1,186 @@
+:root {
+  --red: #e71d36;
+  --cyan: #f4f4ed;
+  --white: white;
+  --darkblue: #02182b;
+  --lightblue: #3083dc;
+  --brownishwhite: #f4f4ed;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--brownishwhite);
+  font-family: "Roboto mono", monospace;
+}
+/* Typography */
+h1 {
+  font-weight: 900;
+  font-size: 2.5rem;
+  color: var(--darkblue);
+}
+sup {
+  font-size: 0.7rem;
+  padding-left: 2.5em;
+}
+/* Layout */
+button {
+  display: flex;
+  color: var(--white);
+  font-weight: 400;
+  font-size: 1.5rem;
+  border-radius: 5%;
+  background: var(--darkblue);
+  align-items: center;
+  justify-content: center;
+  font-family: "Bungee", cursive;
+  border: 5px solid var(--darkblue);
+}
+.flex {
+  display: flex;
+}
+header {
+  padding: 0.75em;
+  text-align: center;
+  margin-bottom: 0;
+}
+main {
+  max-width: 90%;
+  height: 500px;
+  margin: 0 auto;
+  padding: 2.5em;
+  margin-top: 0;
+  max-width: 450px;
+  background: var(--lightblue);
+  flex-direction: column;
+  border: 5px solid var(--darkblue);
+  box-shadow: 15px 15px var(--darkblue);
+  justify-content: space-between;
+}
+.display {
+  height: 12%;
+  background: var(--cyan);
+  flex-direction: column;
+  border: 5px solid var(--darkblue);
+}
+.mode-display {
+  margin-top: 0;
+  padding-top: 0.5;
+  font-size: 0.75rem;
+  min-height: 0.8rem;
+  padding-left: 0.5em;
+}
+.regular-display {
+  display: flex;
+  flex-direction: row;
+}
+.text-border {
+  width: 95%;
+  margin: 0 auto;
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+  height: 2.85em;
+}
+.text-display {
+  width: 100%;
+  float: right;
+  margin-top: 0;
+  padding-top: 0;
+  padding: 0.05em;
+  font-size: 1.5em;
+  text-align: right;
+}
+#hidden-bracket {
+  margin-top: 0;
+  color: grey;
+  min-width: 5%;
+  padding: 0.05em;
+  font-size: 1.5em;
+  visibility: hidden;
+}
+.advanced {
+  height: 28%;
+  width: 100%;
+  display: grid;
+  grid-gap: 0.5em;
+  grid-template-columns: 5.2em 5.2em 5.2em 5.2em 5.2em;
+}
+.advanced button {
+  font-size: 1.35rem;
+}
+.basic {
+  height: 48%;
+  justify-content: space-between;
+}
+.numbers {
+  width: 75%;
+  display: grid;
+  grid-gap: 0.5em;
+  grid-template-columns: auto auto auto;
+}
+.numbers button {
+  font-size: 2rem;
+}
+.symbols {
+  width: 15%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.symbols button {
+  height: 15%;
+  font-size: 1.25rem;
+}
+#delete {
+  padding-top: 0.2em;
+  display: flex;
+  flex-direction: column;
+}
+#function {
+  display: flex;
+  flex-direction: column;
+  flex-flow: column-reverse;
+}
+#function sup {
+  margin-bottom: -1em;
+  padding-left: 5em;
+}
+.back {
+  display: block;
+  margin: 0 auto;
+  padding: 1.5em 0em;
+  text-align: center;
+  text-decoration: none;
+  color: black;
+}
+@media (max-width: 500px) {
+  /* Typography */
+  sup {
+    font-size: 0.5rem;
+    padding-left: 1em;
+  }
+  /* Layout */
+  main {
+    box-shadow: none;
+  }
+  .advanced {
+    width: 100%;
+    place-content: center;
+    grid-template-columns: 17.5% 17.5% 17.5% 17.5% 17.5%;
+  }
+  .advanced button {
+    padding: 0.7em;
+    font-size: 0.75rem;
+  }
+  #function {
+    padding-right: 2em;
+  }
+  .numbers button {
+    font-size: 1.5rem;
+  }
+  .symbols button {
+    font-size: 0.75rem;
+  }
+}

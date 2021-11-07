@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bungee&family=Roboto+Mono:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Scientific Calculator</title>
+  </head>
+  <body>
+    <header>
+      <h1>Scientific Calculator</h1>
+    </header>
+    <main class="flex">
+      <div class="display flex">
+        <div class="mode-display">DEG</div>
+        <div class="regular-display">
+          <div class="text-border">
+              <div class="text-display">
+              </div>
+          </div>
+          <p id="hidden-bracket">)</p>
+          </div>
+        </div>
+      </div>
+      <div class="advanced">
+        <button id="inverse">inv</button>
+        <button id="mode">RAD</button>
+        <button id="regular">%</button>
+        <button id="function">sin</button>
+        <button id="function">cos</button>
+        <button id="function">tan</button>
+        <button id="function">ln</button>
+        <button id="logarithm">log</button>
+        <button id="constant">π</button>
+        <button id="regular">!</button>
+        <button id="constant">e</button>
+        <button id="regular">^</button>
+        <button id="opening-parenthesis">(</button>
+        <button id="closing-parenthesis">)</button>
+        <button id="square">√</button>
+      </div>
+      <div class="basic flex">
+        <section class="numbers">
+          <button id="number">7</button>
+          <button id="number">8</button>
+          <button id="number">9</button>
+          <button id="number">4</button>
+          <button id="number">5</button>
+          <button id="number">6</button>
+          <button id="number">1</button>
+          <button id="number">2</button>
+          <button id="number">3</button>
+          <button id="number">.</button>
+          <button id="number">0</button>
+          <button id="equal">=</button>
+        </section>
+        <section class="symbols">
+          <button id="clear">AC</button>
+          <button id="delete">DEL</button>
+          <button id="regular">/</button>
+          <button id="regular">x</button>
+          <button id="regular">+</button>
+          <button id="regular">-</button>
+        </section>
+      </div>
+    </main>
+    <a href="../index.html" class="back">Back to portfolio &#8592;</a>
+    <script src="./index.js"></script>
+  </body>
+</html>
