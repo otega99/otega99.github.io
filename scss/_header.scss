@@ -1,0 +1,132 @@
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2em 3em;
+  width: 100vw;
+  position: fixed;
+
+  .logo {
+    & a {
+      font-size: 1.1rem;
+      font-weight: 600;
+    }
+  }
+  & li {
+    display: inline-block;
+    margin-right: 2em;
+
+    & a {
+      & span {
+        font-weight: bold;
+        padding-right: 0.5em;
+      }
+      & p {
+        display: inline-block;
+      }
+    }
+
+    &.resume {
+      margin-right: 0em;
+    }
+  }
+  .menu-btn {
+    top: 30px;
+    width: 25px;
+    display: none;
+    transition: all 0.5s ease-in;
+
+    &,
+    &::before,
+    &::after {
+      position: fixed;
+      height: 4px;
+      right: 20px;
+      background: black;
+      cursor: pointer;
+    }
+
+    &::before {
+      content: "";
+      position: fixed;
+      top: 20px;
+      width: 30px;
+    }
+
+    &::after {
+      content: "";
+      top: 40px;
+      width: 20px;
+    }
+
+    &.open {
+      &::before {
+        transform: rotate(-45deg) translateX(-8.75px) translateY(5px);
+      }
+      &::after {
+        width: 30px;
+        transform: rotate(45deg) translateX(-8.75px) translateY(-5px);
+      }
+      background: red;
+    }
+  }
+}
+@include tablet {
+  header {
+    padding: 1em;
+    position: fixed;
+    z-index: 1;
+
+    & .menu {
+      position: fixed;
+      inset: 0;
+      width: 50vw;
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      flex-direction: column;
+      background: red;
+      transform: translateX(100vw);
+      transition: all 0.5s ease-in-out;
+
+      &.open {
+        transform: translateX(50vw);
+      }
+
+      & li {
+        display: initial;
+        margin-right: 0em;
+
+        & a {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+
+          & span {
+            text-align: center;
+            padding-right: 0;
+          }
+          & p {
+            text-align: center;
+          }
+        }
+      }
+    }
+    .menu-btn {
+      display: block;
+    }
+  }
+}
+@include phone {
+  header {
+    & .menu {
+      width: 75vw;
+      transform: translateX(100vw);
+
+      &.open {
+        transform: translateX(25vw);
+      }
+    }
+  }
+}

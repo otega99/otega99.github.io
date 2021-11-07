@@ -1,0 +1,25 @@
+.home {
+  color: #fff;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2em;
+  text-align: center;
+  padding: 1em;
+  background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)),
+    url("../images/bg2.jpg");
+  background-size: cover;
+  background-position: center;
+
+  h1 {
+    font-size: 3rem;
+    line-height: 1;
+  }
+
+  p {
+    font-size: 1.1rem;
+    max-width: 500px;
+  }
+}

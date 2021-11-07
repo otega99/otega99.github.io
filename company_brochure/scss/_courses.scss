@@ -1,0 +1,28 @@
+.courses {
+  text-align: center;
+
+  i {
+    display: grid;
+    place-content: center;
+    color: $green;
+    font-size: 10rem;
+    padding: 0.25em 0em;
+    transition: $transition;
+  }
+  .course {
+    cursor: pointer;
+
+    &:hover {
+      i {
+        transform: scale(1.1);
+      }
+      h3 {
+        color: $green;
+      }
+    }
+  }
+  .row {
+    margin-bottom: 5em;
+    gap: 0.75em;
+  }
+}

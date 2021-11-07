@@ -1,0 +1,120 @@
+header {
+  padding: 1.5em 3em;
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  width: 100vw;
+  transition: 0.5s;
+
+  a {
+    color: #fff;
+    font-weight: 600;
+
+    &:hover {
+      color: $green;
+    }
+  }
+  .logo {
+    font-size: 1.5em;
+    padding-top: 0.125em;
+  }
+
+  .menu {
+    li {
+      font-size: 1.15rem;
+      display: inline-block;
+      margin-right: 1.75em;
+      padding-top: 0.5em;
+    }
+  }
+  .menu-btn,
+  .menu-btn::before,
+  .menu-btn::after {
+    position: fixed;
+    right: 20px;
+    width: 28px;
+    height: 3px;
+    background: $grey;
+    cursor: pointer;
+    transition: $transition;
+  }
+
+  .menu-btn {
+    display: none;
+    top: 32.5px;
+
+    &::before {
+      content: "";
+      top: 25px;
+    }
+
+    &::after {
+      content: "";
+      top: 40px;
+    }
+
+    &.open {
+      &::before {
+        transform: rotate(-45deg) translateX(-4px) translateY(6.5px);
+      }
+      &::after {
+        opacity: 1;
+        transform: rotate(45deg) translateX(-4px) translateY(-6.5px);
+      }
+      background: rgba(0, 0, 0, 0);
+    }
+  }
+  &.scroll {
+    padding: 1em;
+    background: $black;
+    box-shadow: 0em 0.5em 0.5em rgba(0, 0, 0, 0.5);
+
+    a {
+      color: $grey;
+
+      &:hover {
+        color: $green;
+      }
+    }
+
+    .logo {
+      padding-bottom: 0.25em;
+    }
+  }
+}
+@media only screen and (max-width: 991px) {
+  header {
+    padding: 1em;
+    background: $black;
+
+    .menu {
+      position: fixed;
+      inset: 0;
+      min-height: 100vh;
+      width: 100vw;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 2em;
+      margin-top: 4em;
+      padding-top: 2em;
+      background: $black;
+      transform: translateX(-100vw);
+      transition: $transition;
+
+      li {
+        text-align: center;
+        margin-right: 0;
+      }
+
+      &.open {
+        transform: translateX(0);
+      }
+    }
+
+    .menu-btn {
+      display: inline-block;
+    }
+  }
+}

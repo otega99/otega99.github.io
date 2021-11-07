@@ -1,0 +1,22 @@
+footer {
+  color: $grey;
+  background: $black;
+  text-align: center;
+  padding: 1em;
+
+  & a {
+    display: block;
+    margin: 0 auto;
+    padding: 1em 0em;
+    text-align: center;
+    color: $grey;
+
+    &:hover {
+      color: $green;
+    }
+  }
+
+  span {
+    color: $green;
+  }
+}

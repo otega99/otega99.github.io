@@ -1,0 +1,51 @@
+.result {
+  margin: 0 auto;
+  text-align: center;
+  color: $main;
+
+  h2 {
+    padding: 2em 0em;
+  }
+
+  p {
+    font-weight: 500;
+    font-size: 1.125rem;
+    padding-bottom: 4em;
+  }
+
+  & .song-list {
+    padding: 3em 0em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2em;
+
+    li {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5em;
+
+      strong {
+        color: $main;
+      }
+
+      span {
+        font-size: 0.85rem;
+        color: $text;
+        background: $main;
+        width: fit-content;
+        padding: 0.35em 1.125em;
+        border-radius: 100vw;
+        margin: 0em auto;
+        cursor: pointer;
+        letter-spacing: normal;
+        transition: all 0.5s ease-in;
+
+        &:hover {
+          letter-spacing: 3px;
+        }
+      }
+    }
+  }
+}

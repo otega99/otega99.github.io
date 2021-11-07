@@ -1,0 +1,64 @@
+.contact {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("../images/bg5.jpg");
+  background-size: cover;
+  background-position: center;
+
+  h2 {
+    color: #fff;
+    text-align: center;
+  }
+  h3 {
+    color: $grey;
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+  form {
+    background: $black;
+    max-width: 500px;
+    padding: 1.5em 2em;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    box-shadow: 0em 0em 0.5em rgba(0, 0, 0, 0.5);
+    margin: 0em auto;
+  }
+  input,
+  textarea {
+    font-family: "Poppins", sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+
+    &:focus {
+      outline: none;
+    }
+
+    &::placeholder {
+      color: $grey;
+    }
+  }
+  input[type="text"],
+  textarea {
+    color: $grey;
+    background: $black;
+    padding: 1em;
+    border: 2px solid $grey;
+  }
+  input[type="submit"] {
+    width: 7.5em;
+    padding: 0.5em 1em;
+    color: $black;
+    font-weight: 700;
+    background: $green;
+    cursor: pointer;
+    border: none;
+    border-radius: 100vw;
+  }
+}
+@media screen and (max-width: 991px) {
+  .contact {
+    form {
+      padding: 1em;
+    }
+  }
+}

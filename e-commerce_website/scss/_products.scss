@@ -6,19 +6,6 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-
-    select {
-      color: $black;
-      font-family: "Poppins", sans-serif;
-      font-weight: 500;
-      padding: 0.5em 0.75em;
-      box-shadow: rgba(255, 255, 255, 0.2);
-      background: rgba(255, 255, 255, 0.4);
-
-      &:focus {
-        outline: none;
-      }
-    }
   }
 
   .product-pages {
@@ -42,5 +29,8 @@
         border: none;
       }
     }
+  }
+  &.related {
+    padding-top: 0em;
   }
 }

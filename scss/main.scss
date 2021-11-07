@@ -1,0 +1,111 @@
+@import "./config";
+@import "./variables";
+@import "./header";
+@import "./hero";
+@import "./contact";
+@import "./social";
+@import "./experience";
+@import "./work";
+@import url("https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;200;300;400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
+
+body {
+  background: $snow;
+  counter-reset: section;
+  scroll-behavior: smooth;
+  font-family: "Poppins", sans-serif;
+}
+a.btn {
+  padding: 0.75em 1em;
+  border-radius: 5px;
+  border: 1px solid black;
+  font-family: $font-mono;
+}
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+span {
+  font-family: $font-mono;
+}
+.title {
+  position: relative;
+  margin-bottom: 2em;
+
+  &::before {
+    counter-increment: section 1;
+    content: "0" counter(section) ".";
+    font-family: $font-mono;
+    font-size: 1.25rem;
+    padding-right: 0.25em;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    bottom: 0;
+    width: 50vw;
+    height: 2px;
+    width: 300px;
+    margin-left: 0.5em;
+    background: black;
+  }
+}
+section {
+  min-height: 100vh;
+
+  & li {
+    &::before {
+      content: "\f0da";
+      font-family: "FontAwesome";
+      display: inline-block;
+      margin-right: 0.75em;
+    }
+  }
+}
+footer {
+  padding: 2em;
+  font-size: 0.85rem;
+  text-align: center;
+  font-family: $font-mono;
+}
+@include laptop {
+  section {
+    padding: 100px;
+  }
+}
+
+@include tablet {
+  section {
+    padding: 80px;
+  }
+  .title {
+    &::after {
+      width: 350px;
+    }
+  }
+  footer {
+    padding: 0.5em 2em 1em 2em;
+  }
+}
+@include phone {
+  section {
+    padding: 1.5em;
+  }
+  p {
+    font-size: 0.95rem;
+  }
+  .title {
+    font-size: 1.35rem;
+
+    &::before {
+      font-size: 1rem;
+    }
+
+    &::after {
+      width: calc(100% - 10rem);
+    }
+  }
+}

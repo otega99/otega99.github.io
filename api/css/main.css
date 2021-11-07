@@ -1,0 +1,192 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.hero {
+  display: grid;
+  place-content: center;
+  height: 100vh;
+  width: 100vw;
+  background: #2941ab;
+  position: relative;
+}
+
+.hero a.back {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 20px;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+}
+
+.hero .text {
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2em;
+  text-align: center;
+  padding: 1em;
+  z-index: 1;
+}
+
+.hero .text h1 {
+  font-size: 3rem;
+}
+
+.hero .text form {
+  background: #fff;
+  padding: 3px;
+  border-radius: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero .text form input {
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  font-weight: bolder;
+  padding: 0.5em;
+  color: #2941ab;
+  border: none;
+  border-radius: 100vw;
+}
+
+.hero .text form input:focus {
+  outline: none;
+}
+
+.hero .text form input::placeholder {
+  color: #2941ab;
+}
+
+.hero .text form input[type="text"] {
+  padding-left: 2em;
+}
+
+.hero .text form input[type="submit"] {
+  color: #fff;
+  background: #2941ab;
+  cursor: pointer;
+  padding: 0.75em 2em;
+}
+
+@media screen and (max-width: 600px) {
+  .hero h1 {
+    font-size: 3rem;
+  }
+  .hero .text form input {
+    font-size: 0.75rem;
+  }
+  .hero .text form input[type="text"] {
+    width: 60vw;
+  }
+}
+
+.result {
+  margin: 0 auto;
+  text-align: center;
+  color: #2941ab;
+}
+
+.result h2 {
+  padding: 2em 0em;
+}
+
+.result p {
+  font-weight: 500;
+  font-size: 1.125rem;
+  padding-bottom: 4em;
+}
+
+.result .song-list {
+  padding: 3em 0em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2em;
+}
+
+.result .song-list li {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
+
+.result .song-list li strong {
+  color: #2941ab;
+}
+
+.result .song-list li span {
+  font-size: 0.85rem;
+  color: #fff;
+  background: #2941ab;
+  width: fit-content;
+  padding: 0.35em 1.125em;
+  border-radius: 100vw;
+  margin: 0em auto;
+  cursor: pointer;
+  letter-spacing: normal;
+  transition: all 0.5s ease-in;
+}
+
+.result .song-list li span:hover {
+  letter-spacing: 3px;
+}
+
+body {
+  overflow-x: hidden;
+  font-family: "Poppins", sans-serif;
+}
+
+a.btn {
+  position: fixed;
+  left: 48.5%;
+  width: 4.5em;
+  height: 4.5em;
+  border-radius: 100vw;
+  background: #fff;
+  bottom: 10vw;
+  text-decoration: none;
+  box-shadow: 0.5em 0.5em 1em rgba(0, 0, 0, 0.5);
+  display: none;
+}
+
+a.btn i {
+  color: #2941ab;
+  font-size: 1.75rem;
+}
+
+a.btn:hover i {
+  animation: drop 0.75s infinite ease-in-out;
+}
+
+a.btn.show {
+  display: grid;
+  place-content: center;
+}
+
+@keyframes drop {
+  0% {
+    margin-top: 0em;
+  }
+  100% {
+    margin-top: 0.75em;
+  }
+}
+/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,437 @@
+@import url("https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;200;300;400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2em 3em;
+  width: 100vw;
+  position: fixed;
+}
+
+header .logo a {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+header li {
+  display: inline-block;
+  margin-right: 2em;
+}
+
+header li a span {
+  font-weight: bold;
+  padding-right: 0.5em;
+}
+
+header li a p {
+  display: inline-block;
+}
+
+header li.resume {
+  margin-right: 0em;
+}
+
+header .menu-btn {
+  top: 30px;
+  width: 25px;
+  display: none;
+  transition: all 0.5s ease-in;
+}
+
+header .menu-btn, header .menu-btn::before, header .menu-btn::after {
+  position: fixed;
+  height: 4px;
+  right: 20px;
+  background: black;
+  cursor: pointer;
+}
+
+header .menu-btn::before {
+  content: "";
+  position: fixed;
+  top: 20px;
+  width: 30px;
+}
+
+header .menu-btn::after {
+  content: "";
+  top: 40px;
+  width: 20px;
+}
+
+header .menu-btn.open {
+  background: red;
+}
+
+header .menu-btn.open::before {
+  transform: rotate(-45deg) translateX(-8.75px) translateY(5px);
+}
+
+header .menu-btn.open::after {
+  width: 30px;
+  transform: rotate(45deg) translateX(-8.75px) translateY(-5px);
+}
+
+@media screen and (max-width: 768px) {
+  header {
+    padding: 1em;
+    position: fixed;
+    z-index: 1;
+  }
+  header .menu {
+    position: fixed;
+    inset: 0;
+    width: 50vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    background: red;
+    transform: translateX(100vw);
+    transition: all 0.5s ease-in-out;
+  }
+  header .menu.open {
+    transform: translateX(50vw);
+  }
+  header .menu li {
+    display: initial;
+    margin-right: 0em;
+  }
+  header .menu li a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  header .menu li a span {
+    text-align: center;
+    padding-right: 0;
+  }
+  header .menu li a p {
+    text-align: center;
+  }
+  header .menu-btn {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  header .menu {
+    width: 75vw;
+    transform: translateX(100vw);
+  }
+  header .menu.open {
+    transform: translateX(25vw);
+  }
+}
+
+.hero {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.hero h1 {
+  font-size: clamp(1rem, 8vw, 1.15rem);
+  font-family: "Roboto Mono", san-serif;
+}
+
+.hero .big {
+  font-size: 70px;
+}
+
+.hero p {
+  max-width: 600px;
+  font-size: 1rem;
+}
+
+.hero a.btn {
+  margin-top: 2em;
+}
+
+@media screen and (max-width: 1024px) {
+  .hero .big {
+    font-size: 50px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .hero .big {
+    font-size: 40px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .hero .big {
+    font-size: 2rem;
+  }
+  .hero p {
+    font-size: 14px;
+  }
+}
+
+.contact {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.contact .text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 2em;
+}
+
+.contact .text h1 {
+  font-size: 3rem;
+}
+
+.contact .text p {
+  max-width: 600px;
+  padding: 0.75em 0em;
+  text-align: center;
+}
+
+.contact a.btn {
+  display: inline-block;
+  margin-top: 3em;
+}
+
+@media screen and (max-width: 425px) {
+  .contact {
+    justify-content: flex-start;
+  }
+  .contact .text h1 {
+    font-size: 2rem;
+  }
+}
+
+.social {
+  position: fixed;
+  left: 50px;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.social a {
+  font-size: 1.5rem;
+  transition: all 0.5s ease-in-out;
+}
+
+.social a:hover {
+  transform: translateY(-5px);
+}
+
+.social::after {
+  content: "";
+  position: relative;
+  width: 2px;
+  height: 150px;
+  background: black;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 768px) {
+  .social {
+    position: relative;
+    display: block;
+    width: 210px;
+    margin: 0 auto;
+    padding-bottom: -2em;
+  }
+  .social::after {
+    width: 0;
+    height: 0;
+  }
+}
+
+.experience .role {
+  padding: 2em 10em;
+}
+
+@media screen and (max-width: 768px) {
+  .experience .role {
+    padding: 1em;
+  }
+}
+
+.work .row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.work .row .col-50 {
+  flex-basis: 45%;
+  padding: 1.5em 0em;
+}
+
+.work .row .col-50 img {
+  width: 100%;
+}
+
+.work .row .col-50 h2 {
+  margin-top: -1em;
+  margin-bottom: 0.5em;
+}
+
+.work .row .col-50 p {
+  margin-bottom: 1.75em;
+}
+
+.work .row .col-50 a {
+  margin-right: 2em;
+}
+
+@media screen and (max-width: 1024px) {
+  .work .row .col-50 a {
+    font-size: 0.65rem;
+    margin-right: 1em;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .work .row {
+    justify-content: center;
+  }
+  .work .row .col-50 {
+    flex-basis: 90%;
+  }
+  .work .row .col-50 img {
+    padding-top: 2em;
+  }
+  .work .row .col-50 a {
+    display: block;
+    max-width: fit-content;
+    margin-top: 1em;
+    margin-right: 0em;
+    font-size: 1rem;
+  }
+}
+
+body {
+  background: #f4f4f4;
+  counter-reset: section;
+  scroll-behavior: smooth;
+  font-family: "Poppins", sans-serif;
+}
+
+a.btn {
+  padding: 0.75em 1em;
+  border-radius: 5px;
+  border: 1px solid black;
+  font-family: "Roboto Mono", san-serif;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+span {
+  font-family: "Roboto Mono", san-serif;
+}
+
+.title {
+  position: relative;
+  margin-bottom: 2em;
+}
+
+.title::before {
+  counter-increment: section 1;
+  content: "0" counter(section) ".";
+  font-family: "Roboto Mono", san-serif;
+  font-size: 1.25rem;
+  padding-right: 0.25em;
+}
+
+.title::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  bottom: 0;
+  width: 50vw;
+  height: 2px;
+  width: 300px;
+  margin-left: 0.5em;
+  background: black;
+}
+
+section {
+  min-height: 100vh;
+}
+
+section li::before {
+  content: "\f0da";
+  font-family: "FontAwesome";
+  display: inline-block;
+  margin-right: 0.75em;
+}
+
+footer {
+  padding: 2em;
+  font-size: 0.85rem;
+  text-align: center;
+  font-family: "Roboto Mono", san-serif;
+}
+
+@media screen and (max-width: 1024px) {
+  section {
+    padding: 100px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  section {
+    padding: 80px;
+  }
+  .title::after {
+    width: 350px;
+  }
+  footer {
+    padding: 0.5em 2em 1em 2em;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  section {
+    padding: 1.5em;
+  }
+  p {
+    font-size: 0.95rem;
+  }
+  .title {
+    font-size: 1.35rem;
+  }
+  .title::before {
+    font-size: 1rem;
+  }
+  .title::after {
+    width: calc(100% - 10rem);
+  }
+}
+/*# sourceMappingURL=main.css.map */

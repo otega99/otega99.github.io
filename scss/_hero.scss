@@ -1,0 +1,51 @@
+.hero {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+
+  & h1 {
+    font-size: clamp(1rem, 8vw, 1.15rem);
+    font-family: $font-mono;
+  }
+
+  & .big {
+    font-size: 70px;
+  }
+
+  & p {
+    max-width: 600px;
+    font-size: 1rem;
+  }
+
+  & a.btn {
+    margin-top: 2em;
+  }
+}
+
+@include laptop {
+  .hero {
+    .big {
+      font-size: 50px;
+    }
+  }
+}
+
+@include tablet {
+  .hero {
+    .big {
+      font-size: 40px;
+    }
+  }
+}
+
+@include phone {
+  .hero {
+    .big {
+      font-size: 2rem;
+    }
+    p {
+      font-size: 14px;
+    }
+  }
+}

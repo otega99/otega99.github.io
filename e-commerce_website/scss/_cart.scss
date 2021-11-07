@@ -43,15 +43,6 @@
     }
   }
 
-  input {
-    max-width: 3em;
-    height: 2em;
-
-    &:focus {
-      outline: none;
-    }
-  }
-
   &-text {
     a.btn {
       font-size: 0.75rem;

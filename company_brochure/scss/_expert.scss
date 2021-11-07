@@ -1,0 +1,27 @@
+.expert {
+  padding: 7em 1em;
+  h2 {
+    text-align: center;
+  }
+  img {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+  }
+  .col-4 {
+    background: $green;
+    border-radius: 15px;
+    box-shadow: 0em 1em 1em rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 2em 0em;
+  }
+  p {
+    color: $black;
+    font-size: 1.1rem;
+    font-weight: 700;
+    padding: 0.5em 0.75em;
+    padding-bottom: 1em;
+  }
+}

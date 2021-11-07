@@ -1,0 +1,66 @@
+.work {
+  .row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    & .col-50 {
+      flex-basis: 45%;
+      padding: 1.5em 0em;
+
+      img {
+        width: 100%;
+      }
+
+      & h2 {
+        margin-top: -1em;
+        margin-bottom: 0.5em;
+      }
+
+      & p {
+        margin-bottom: 1.75em;
+      }
+
+      & a {
+        margin-right: 2em;
+      }
+    }
+  }
+}
+@include laptop {
+  .work {
+    .row {
+      & .col-50 {
+        a {
+          font-size: 0.65rem;
+          margin-right: 1em;
+        }
+      }
+    }
+  }
+}
+@include tablet {
+}
+@include phone {
+  .work {
+    .row {
+      justify-content: center;
+      & .col-50 {
+        flex-basis: 90%;
+
+        & img {
+          padding-top: 2em;
+        }
+
+        & a {
+          display: block;
+          max-width: fit-content;
+          margin-top: 1em;
+          margin-right: 0em;
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+}

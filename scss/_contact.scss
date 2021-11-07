@@ -1,0 +1,39 @@
+.contact {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+
+  & .text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 2em;
+
+    h1 {
+      font-size: 3rem;
+    }
+
+    p {
+      max-width: 600px;
+      padding: 0.75em 0em;
+      text-align: center;
+    }
+  }
+
+  & a.btn {
+    display: inline-block;
+    margin-top: 3em;
+  }
+}
+@include phone {
+  .contact {
+    justify-content: flex-start;
+
+    & .text {
+      h1 {
+        font-size: 2rem;
+      }
+    }
+  }
+}

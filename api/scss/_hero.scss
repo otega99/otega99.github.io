@@ -1,0 +1,90 @@
+.hero {
+  display: grid;
+  place-content: center;
+  height: 100vh;
+  width: 100vw;
+  background: $main;
+  position: relative;
+
+  & a.back {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 20px;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+  }
+
+  & .text {
+    color: $text;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2em;
+    text-align: center;
+    padding: 1em;
+    z-index: 1;
+
+    h1 {
+      font-size: 3rem;
+    }
+
+    & form {
+      background: $text;
+      padding: 3px;
+      border-radius: 100vw;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      input {
+        font-family: "Poppins", sans-serif;
+        font-size: 1rem;
+        font-weight: bolder;
+        padding: 0.5em;
+        color: $main;
+        border: none;
+        border-radius: 100vw;
+
+        &:focus {
+          outline: none;
+        }
+
+        &::placeholder {
+          color: $main;
+        }
+        &[type="text"] {
+          padding-left: 2em;
+        }
+        &[type="submit"] {
+          color: $text;
+          background: $main;
+          cursor: pointer;
+          padding: 0.75em 2em;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .hero {
+    h1 {
+      font-size: 3rem;
+    }
+
+    & .text {
+      form {
+        input {
+          font-size: 0.75rem;
+
+          &[type="text"] {
+            width: 60vw;
+          }
+        }
+      }
+    }
+  }
+}

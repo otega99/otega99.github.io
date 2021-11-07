@@ -1,0 +1,78 @@
+@import "./config";
+@import "./variables";
+@import "./header";
+@import "./home";
+@import "./about";
+@import "./courses";
+@import "./expert";
+@import "./testimonial";
+@import "./contact";
+@import "./footer";
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+a.btn {
+  color: $black;
+  font-weight: 600;
+  background: $green;
+  border-radius: 100vw;
+  font-size: 1.25rem;
+  padding: 0.5em 2em;
+  letter-spacing: 0px;
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    letter-spacing: 4px;
+  }
+}
+section {
+  color: $grey;
+  padding: 8em 1em;
+  background: $black;
+
+  h2 {
+    color: $green;
+    font-size: 2rem;
+    padding-bottom: 1em;
+  }
+}
+.small-container {
+  max-width: 1100px;
+  margin: 0em auto;
+}
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+.col-2,
+.col-3,
+.col-4,
+.col-6 {
+  img {
+    width: 100%;
+  }
+}
+.col-2 {
+  flex-basis: 40%;
+}
+.col-3 {
+  flex-basis: 30%;
+}
+.col-4 {
+  flex-basis: 22.5%;
+}
+.col-6 {
+  flex-basis: 15%;
+}
+@media screen and (max-width: 991px) {
+  .col-2,
+  .col-3,
+  .col-4,
+  .col-6 {
+    flex-basis: 90%;
+  }
+}

@@ -1,0 +1,48 @@
+@import "./config";
+@import "./variables";
+@import "./hero";
+@import "./result";
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
+
+body {
+  overflow-x: hidden;
+  font-family: "Poppins", sans-serif;
+}
+
+a.btn {
+  position: fixed;
+  left: 48.5%;
+  width: 4.5em;
+  height: 4.5em;
+  border-radius: 100vw;
+  background: $text;
+  bottom: 10vw;
+  text-decoration: none;
+  box-shadow: 0.5em 0.5em 1em rgba(0, 0, 0, 0.5);
+  display: none;
+
+  i {
+    color: $main;
+    font-size: 1.75rem;
+  }
+
+  &:hover {
+    i {
+      animation: drop 0.75s infinite ease-in-out;
+    }
+  }
+
+  &.show {
+    display: grid;
+    place-content: center;
+  }
+}
+
+@keyframes drop {
+  0% {
+    margin-top: 0em;
+  }
+  100% {
+    margin-top: 0.75em;
+  }
+}

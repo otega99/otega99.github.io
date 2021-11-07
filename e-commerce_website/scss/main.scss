@@ -9,6 +9,7 @@
 @import "./products";
 @import "./cart";
 @import "./form";
+@import "./details";
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,900&display=swap");
 
 body {
@@ -68,6 +69,36 @@ a.btn {
     bottom: 0;
     background: $white;
     transform: translateX(-50%);
+  }
+}
+input[type="number"] {
+  max-width: 3.25em;
+  height: 2em;
+  text-align: center;
+  // color: white;
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  box-shadow: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.4);
+  border: none;
+
+  &:focus {
+    outline: none;
+  }
+}
+select {
+  max-width: 12em;
+  color: $black;
+  font-family: "Poppins", sans-serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  padding: 0.5em 0.75em;
+  box-shadow: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.4);
+
+  &:focus {
+    outline: none;
   }
 }
 @media screen and (max-width: 991px) {
