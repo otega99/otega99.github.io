@@ -7,10 +7,12 @@
   gap: 1em;
 
   & a {
+    color: $gray;
     font-size: 1.5rem;
     transition: all 0.5s ease-in-out;
 
     &:hover {
+      color: $blue;
       transform: translateY(-5px);
     }
   }
@@ -20,7 +22,7 @@
     position: relative;
     width: 2px;
     height: 150px;
-    background: black;
+    background: $gray;
     margin: 0 auto;
   }
 }

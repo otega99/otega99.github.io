@@ -5,12 +5,26 @@
   flex-direction: column;
 
   & h1 {
-    font-size: clamp(1rem, 8vw, 1.15rem);
+    color: $blue;
+    font-size: clamp(1rem, 8vw, 1.25rem);
     font-family: $font-mono;
+  }
+
+  & span {
+    font-family: $font-mono;
+    font-weight: 600;
+    font-size: 1.25rem;
+    padding: 0.5em 0em;
   }
 
   & .big {
     font-size: 70px;
+  }
+  h2 {
+    color: $purple;
+  }
+  h3 {
+    color: $yellow;
   }
 
   & p {
@@ -46,6 +60,13 @@
     }
     p {
       font-size: 14px;
+    }
+    h1 {
+      padding-top: 3em;
+    }
+    h1,
+    span {
+      font-size: 1rem;
     }
   }
 }

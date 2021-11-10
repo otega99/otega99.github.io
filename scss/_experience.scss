@@ -1,5 +1,14 @@
 .experience {
+  padding-top: 7.5em;
   .role {
+    h2 {
+      padding-bottom: 0.5em;
+
+      & span {
+        color: $blue;
+        padding-right: 0.25em;
+      }
+    }
     padding: 2em 10em;
   }
 }

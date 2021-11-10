@@ -7,6 +7,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 a {
@@ -21,12 +22,16 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 2em 3em;
+  padding: 1.5em 3em;
   width: 100vw;
   position: fixed;
+  background: #0e161f;
+  box-shadow: 1em 0em 1em rgba(0, 0, 0, 0.5);
+  transition: 0.5s;
 }
 
 header .logo a {
+  color: #00d2fa;
   font-size: 1.1rem;
   font-weight: 600;
 }
@@ -53,14 +58,14 @@ header .menu-btn {
   top: 30px;
   width: 25px;
   display: none;
-  transition: all 0.5s ease-in;
+  transition: width 0.5s ease-in, transform 0.5s ease-in, background 0s ease-in;
 }
 
 header .menu-btn, header .menu-btn::before, header .menu-btn::after {
   position: fixed;
   height: 4px;
   right: 20px;
-  background: black;
+  background: #00d2fa;
   cursor: pointer;
 }
 
@@ -78,7 +83,7 @@ header .menu-btn::after {
 }
 
 header .menu-btn.open {
-  background: red;
+  background: #0e161f;
 }
 
 header .menu-btn.open::before {
@@ -104,7 +109,7 @@ header .menu-btn.open::after {
     align-items: center;
     justify-content: space-evenly;
     flex-direction: column;
-    background: red;
+    background: #0e161f;
     transform: translateX(100vw);
     transition: all 0.5s ease-in-out;
   }
@@ -151,12 +156,28 @@ header .menu-btn.open::after {
 }
 
 .hero h1 {
-  font-size: clamp(1rem, 8vw, 1.15rem);
+  color: #00d2fa;
+  font-size: clamp(1rem, 8vw, 1.25rem);
   font-family: "Roboto Mono", san-serif;
+}
+
+.hero span {
+  font-family: "Roboto Mono", san-serif;
+  font-weight: 600;
+  font-size: 1.25rem;
+  padding: 0.5em 0em;
 }
 
 .hero .big {
   font-size: 70px;
+}
+
+.hero h2 {
+  color: #fa557d;
+}
+
+.hero h3 {
+  color: #ffd152;
 }
 
 .hero p {
@@ -187,6 +208,13 @@ header .menu-btn.open::after {
   .hero p {
     font-size: 14px;
   }
+  .hero h1 {
+    padding-top: 3em;
+  }
+  .hero h1,
+  .hero span {
+    font-size: 1rem;
+  }
 }
 
 .contact {
@@ -205,6 +233,7 @@ header .menu-btn.open::after {
 
 .contact .text h1 {
   font-size: 3rem;
+  color: #d3d3d3;
 }
 
 .contact .text p {
@@ -237,11 +266,13 @@ header .menu-btn.open::after {
 }
 
 .social a {
+  color: #d3d3d3;
   font-size: 1.5rem;
   transition: all 0.5s ease-in-out;
 }
 
 .social a:hover {
+  color: #00d2fa;
   transform: translateY(-5px);
 }
 
@@ -250,7 +281,7 @@ header .menu-btn.open::after {
   position: relative;
   width: 2px;
   height: 150px;
-  background: black;
+  background: #d3d3d3;
   margin: 0 auto;
 }
 
@@ -268,14 +299,31 @@ header .menu-btn.open::after {
   }
 }
 
+.experience {
+  padding-top: 7.5em;
+}
+
 .experience .role {
   padding: 2em 10em;
+}
+
+.experience .role h2 {
+  padding-bottom: 0.5em;
+}
+
+.experience .role h2 span {
+  color: #00d2fa;
+  padding-right: 0.25em;
 }
 
 @media screen and (max-width: 768px) {
   .experience .role {
     padding: 1em;
   }
+}
+
+.work {
+  padding-top: 7.5em;
 }
 
 .work .row {
@@ -334,17 +382,33 @@ header .menu-btn.open::after {
 }
 
 body {
-  background: #f4f4f4;
   counter-reset: section;
-  scroll-behavior: smooth;
+  color: #d3d3d3;
+  background: #0e161f;
   font-family: "Poppins", sans-serif;
+}
+
+a {
+  color: #00d2fa;
 }
 
 a.btn {
   padding: 0.75em 1em;
   border-radius: 5px;
-  border: 1px solid black;
+  border: 1px solid #00d2fa;
   font-family: "Roboto Mono", san-serif;
+}
+
+span {
+  color: #50e191;
+}
+
+h2 {
+  color: #50e191;
+}
+
+h2 span {
+  font-family: "Poppins", sans-serif;
 }
 
 .container {
@@ -358,10 +422,14 @@ span {
 
 .title {
   position: relative;
+  display: flex;
+  align-items: center;
   margin-bottom: 2em;
+  white-space: nowrap;
 }
 
 .title::before {
+  color: #50e191;
   counter-increment: section 1;
   content: "0" counter(section) ".";
   font-family: "Roboto Mono", san-serif;
@@ -371,24 +439,30 @@ span {
 
 .title::after {
   content: "";
-  position: absolute;
-  top: 50%;
-  bottom: 0;
-  width: 50vw;
-  height: 2px;
+  display: block;
+  position: relative;
+  top: 5%;
+  height: 1px;
   width: 300px;
   margin-left: 0.5em;
-  background: black;
+  background: #a8b2d1;
 }
 
 section {
   min-height: 100vh;
+  display: grid;
+  place-content: center;
+}
+
+section a {
+  color: #00d2fa;
 }
 
 section li::before {
   content: "\f0da";
   font-family: "FontAwesome";
   display: inline-block;
+  color: #50e191;
   margin-right: 0.75em;
 }
 
@@ -431,7 +505,7 @@ footer {
     font-size: 1rem;
   }
   .title::after {
-    width: calc(100% - 10rem);
+    width: 90%;
   }
 }
 /*# sourceMappingURL=main.css.map */
