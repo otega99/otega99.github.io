@@ -108,7 +108,7 @@ header {
       flex-direction: column;
       padding: 10em;
       background: $black;
-      transform: translateX(-100vw);
+      transform: translateX(100vw);
       transition: $transition;
 
       &.open {

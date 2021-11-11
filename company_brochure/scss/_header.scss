@@ -103,7 +103,7 @@ header {
       margin-top: 4em;
       padding-top: 2em;
       background: $black;
-      transform: translateX(-100vw);
+      transform: translateX(100vw);
       transition: $transition;
 
       li {

@@ -1,0 +1,30 @@
+// .about {
+//   .text {
+//     display: flex;
+//     justify-content: space-between;
+
+//     & .bio {
+//       flex-basis: 55%;
+//     }
+//     & .img {
+//       flex-basis: 35%;
+
+//       img {
+//         width: 300px;
+//         height: 350px;
+//       }
+//     }
+//   }
+// }
+// @include tablet {
+//   .about {
+//     .text {
+//       flex-direction: column;
+
+//       & .bio,
+//       & .img {
+//         flex-basis: 90%;
+//       }
+//     }
+//   }
+// }
