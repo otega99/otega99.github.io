@@ -54,20 +54,20 @@ header .navigation li {
 
 header .menu-btn {
   position: fixed;
-  top: 40px;
+  top: 28px;
   right: 20px;
   display: none;
 }
 
 header .menu-btn::before {
   content: "";
-  top: 30px;
+  top: 20px;
   position: fixed;
 }
 
 header .menu-btn::after {
   content: "";
-  top: 50px;
+  top: 36px;
   position: fixed;
 }
 
@@ -84,12 +84,12 @@ header .menu-btn.open {
 }
 
 header .menu-btn.open::before {
-  transform: rotate(-45deg) translateX(-7.5px) translateY(5px);
+  transform: rotate(-45deg) translateX(-6.25px) translateY(5px);
 }
 
 header .menu-btn.open::after {
   opacity: 1;
-  transform: rotate(45deg) translateX(-7.5px) translateY(-5px);
+  transform: rotate(45deg) translateX(-6.25px) translateY(-5px);
 }
 
 header .cart {
@@ -106,8 +106,11 @@ header.light {
 
 @media screen and (max-width: 991px) {
   header {
-    padding: 1em;
+    padding: 0.75em;
     background: #161616;
+  }
+  header .logo img {
+    width: 30px;
   }
   header .logo h3 {
     font-size: 1.125rem;
@@ -119,13 +122,13 @@ header.light {
     right: 0;
     bottom: 0;
     width: 100vw;
-    height: calc(100vh - 5em);
-    margin-top: 5em;
+    height: calc(100vh - 3.25em);
+    margin-top: 3.25em;
     display: flex;
     align-items: center;
     justify-content: space-between;
     flex-direction: column;
-    padding: 10em;
+    padding: 7.5em;
     background: #161616;
     transform: translateX(100vw);
     transition: all 300ms ease-in;
@@ -142,6 +145,8 @@ header.light {
   }
   header .cart {
     right: 70px;
+    padding-top: 0.25em;
+    font-size: 1.25rem;
   }
 }
 

@@ -34,18 +34,18 @@ header {
 
   .menu-btn {
     position: fixed;
-    top: 40px;
+    top: 28px;
     right: 20px;
     display: none;
 
     &::before {
       content: "";
-      top: 30px;
+      top: 20px;
       position: fixed;
     }
     &::after {
       content: "";
-      top: 50px;
+      top: 36px;
       position: fixed;
     }
 
@@ -61,11 +61,11 @@ header {
 
     &.open {
       &::before {
-        transform: rotate(-45deg) translateX(-7.5px) translateY(5px);
+        transform: rotate(-45deg) translateX(-6.25px) translateY(5px);
       }
       &::after {
         opacity: 1;
-        transform: rotate(45deg) translateX(-7.5px) translateY(-5px);
+        transform: rotate(45deg) translateX(-6.25px) translateY(-5px);
       }
       background: rgba(0, 0, 0, 0);
     }
@@ -85,10 +85,14 @@ header {
 
 @media screen and (max-width: 991px) {
   header {
-    padding: 1em;
+    padding: 0.75em;
     background: $black;
 
     & .logo {
+      & img {
+        width: 30px;
+      }
+
       & h3 {
         font-size: 1.125rem;
       }
@@ -100,13 +104,13 @@ header {
       right: 0;
       bottom: 0;
       width: 100vw;
-      height: calc(100vh - 5em);
-      margin-top: 5em;
+      height: calc(100vh - 3.25em);
+      margin-top: 3.25em;
       display: flex;
       align-items: center;
       justify-content: space-between;
       flex-direction: column;
-      padding: 10em;
+      padding: 7.5em;
       background: $black;
       transform: translateX(100vw);
       transition: $transition;
@@ -124,6 +128,8 @@ header {
     }
     .cart {
       right: 70px;
+      padding-top: 0.25em;
+      font-size: 1.25rem;
     }
   }
 }
