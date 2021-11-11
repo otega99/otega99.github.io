@@ -25,11 +25,14 @@
   }
   h3 {
     color: $yellow;
+    line-height: 1;
+    padding: 0.25em 0em;
   }
 
   & p {
     max-width: 600px;
     font-size: 1rem;
+    padding-top: 0.25em;
   }
 
   & a.btn {

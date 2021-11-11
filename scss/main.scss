@@ -16,6 +16,9 @@ body {
   background: $navy;
   font-family: "Poppins", sans-serif;
 }
+p {
+  font-size: 1.1rem;
+}
 a {
   color: $blue;
 
@@ -31,6 +34,10 @@ span {
 }
 h2 {
   color: $green;
+
+  & a:hover {
+    text-decoration: underline;
+  }
   span {
     font-family: "Poppins", sans-serif;
   }
@@ -48,6 +55,7 @@ span {
   align-items: center;
   margin-bottom: 2em;
   white-space: nowrap;
+  color: $gray;
 
   &::before {
     color: $green;
@@ -55,7 +63,7 @@ span {
     content: "0" counter(section) ".";
     font-family: $font-mono;
     font-size: 1.25rem;
-    padding-right: 0.25em;
+    padding-right: 0.5em;
   }
 
   &::after {
@@ -79,11 +87,17 @@ section {
   }
 
   & li {
+    display: flex;
+    align-items: flex-start;
+    font-size: 1.1rem;
+    margin-bottom: 0.75em;
+
     &::before {
       content: "\f0da";
       font-family: "FontAwesome";
       display: inline-block;
       color: $green;
+      margin-top: 0.25em;
       margin-right: 0.75em;
     }
   }
